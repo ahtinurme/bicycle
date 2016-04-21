@@ -31,7 +31,9 @@ if (isset($bicycle[0])) {
         <label for="brand">Brand</label>
         <input name="brand" id="brand" value="<?php echo isset($bicycle[0]['brand']) ? $bicycle[0]['brand'] : ''; ?>">
     </div>
-    <div clas
+    <div class>
+        
+    </div>
 
     <button type="submit">Save bicycle</button>
 </form>
