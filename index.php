@@ -1,14 +1,10 @@
 <?php
 require 'config.php';
-$bicycles = $pdo->query('
-  SELECT b.*, 
-  IFNULL((SELECT SUM(bp.weight) FROM bicycle_parts bp WHERE bp.bicycle_id = b.id), 0) weight, 
-  IFNULL((SELECT SUM(bp2.price) FROM bicycle_parts bp2 WHERE bp2.bicycle_id = b.id), 0) price 
-  FROM bicycles b ORDER by b.added DESC');
+$bicycles = $pdo->query(' SELECT * FROM bicycles ORDER by added DESC');
 ?>
 <html>
 <head>
-    <title>Bycycles</title>
+    <title>Bicycles</title>
 </head>
 <body>
 <a href="edit-bicycle.php">Add a bicycle</a>
